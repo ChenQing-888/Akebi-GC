@@ -871,10 +871,10 @@ PatternScanner::SearchResult PatternScanner::SearchInRange(uintptr_t start, uint
 
 bool PatternScanner::IsFunctionEntry(uintptr_t functionAddress)
 {
-	auto address = FindFunctionEntry(functionAddress);
-	if (functionAddress == 0)
-		return false;
-	return functionAddress == functionAddress;
+        auto address = FindFunctionEntry(functionAddress);
+        if (address == 0)
+                return false;
+        return functionAddress == address;
 }
 
 uintptr_t PatternScanner::FindFunctionEntry(uintptr_t address)
